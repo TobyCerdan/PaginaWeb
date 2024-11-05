@@ -26,7 +26,7 @@ body {
     padding: 15px 0;
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap; /* Permite que los elementos se acomoden en una nueva línea si es necesario */
+    flex-wrap: wrap;
 }
 
 /* Logo */
@@ -42,10 +42,11 @@ body {
     background-color: #004080;
     padding: 12px 25px;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 5px;
     border-radius: 50px;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
 /* Hover en enlaces de navegación */
@@ -59,22 +60,25 @@ body {
     .nav-banner {
         padding: 10px; /* Reduce el padding */
         flex-direction: column; /* Cambia la dirección de los elementos a vertical */
+        align-items: center; /* Centra los elementos */
     }
 
-    /* Reduce el tamaño del logo para adaptarse mejor a pantallas pequeñas */
+    /* Ajusta el logo en dispositivos móviles */
     .nav-banner .logo {
         height: 50px;
-        margin-bottom: 10px; /* Añade un poco de espacio debajo del logo */
+        margin-bottom: 10px;
     }
 
-    /* Ajusta los enlaces de navegación para ocupar más espacio en móviles */
+    /* Ajusta los enlaces de navegación */
     .nav-banner a {
         padding: 10px 20px;
-        margin: 5px 0; /* Ajusta el margen para separar los enlaces */
-        width: 100%; /* Haz que cada enlace ocupe el ancho completo */
-        text-align: center; /* Centra el texto */
+        margin: 5px 0;
+        width: 90%; /* Haz que los enlaces ocupen casi el ancho completo */
+        text-align: center;
+        font-size: 14px; /* Reduce el tamaño de la fuente para que quepa mejor */
     }
 }
+
 
 .main-content {
     max-width: 1200px;
