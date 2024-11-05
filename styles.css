@@ -10,20 +10,14 @@ body {
     color: #333;
     line-height: 1.6;
 }
-
+/* Banner principal */
 .welcome-banner img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-
-.nav-banner .logo {
-    height: 60px; 
-    margin-right: 5px; 
-    vertical-align: middle;
-}
-
+/* Banner de navegación */
 .nav-banner {
     display: flex;
     align-items: center;
@@ -32,10 +26,17 @@ body {
     padding: 15px 0;
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en una nueva línea si es necesario */
 }
 
+/* Logo */
+.nav-banner .logo {
+    height: 60px; 
+    margin-right: 5px; 
+    vertical-align: middle;
+}
 
-
+/* Estilos para los enlaces de navegación */
 .nav-banner a {
     color: white;
     background-color: #004080;
@@ -47,8 +48,32 @@ body {
     transition: background-color 0.3s ease;
 }
 
+/* Hover en enlaces de navegación */
 .nav-banner a:hover {
     background-color: #0059b3;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Ajusta el banner de navegación para centrarse y ocupar más espacio */
+    .nav-banner {
+        padding: 10px; /* Reduce el padding */
+        flex-direction: column; /* Cambia la dirección de los elementos a vertical */
+    }
+
+    /* Reduce el tamaño del logo para adaptarse mejor a pantallas pequeñas */
+    .nav-banner .logo {
+        height: 50px;
+        margin-bottom: 10px; /* Añade un poco de espacio debajo del logo */
+    }
+
+    /* Ajusta los enlaces de navegación para ocupar más espacio en móviles */
+    .nav-banner a {
+        padding: 10px 20px;
+        margin: 5px 0; /* Ajusta el margen para separar los enlaces */
+        width: 100%; /* Haz que cada enlace ocupe el ancho completo */
+        text-align: center; /* Centra el texto */
+    }
 }
 
 .main-content {
